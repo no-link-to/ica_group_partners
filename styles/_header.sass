@@ -1,0 +1,119 @@
+.header
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding: 1.875em 0
+    border-bottom: 2px solid #ffffff
+    &__logo
+        margin: 0
+        padding-left: 40px
+        font-size: 2.25em
+    &--burger
+        display: none
+    &--nav
+        display: flex
+        flex-direction: row
+        align-items: center
+        font-size: 1.25em
+        padding-right: 40px
+        a
+            margin-right: 1.5625em
+            cursor: pointer
+            &:last-child
+                margin-right: 0
+            &:hover
+                font-weight: bold
+
+.first-span 
+    &.active
+        transform: rotate(-45deg) translate(-8px, -3px)
+.middle-span 
+    &.active
+        display: none
+.last-span 
+    &.active
+        transform: rotate(45deg) translate(-9px, 2px)
+
+.hidden-menu 
+    display: flex
+    flex-direction: column
+    position: fixed
+    padding: 4em 2em
+    margin: 0
+    box-sizing: border-box
+    width: 200px
+    background-color: #44657C
+    height: 100%
+    top: 0
+    right: -200px
+    transition: right .5s
+    z-index: 2 
+    text-align: right
+    &.show 
+        right: 0
+    &__link
+        margin-top: 20px
+        color: #ffffff
+        font-size: 1.2em
+
+.top
+    background: #44657C
+    padding: 0 12.5em
+    padding-bottom: 30px
+    color: #ffffff
+    &__title
+        font-weight: 400
+        font-size: 2.8em
+        margin: 30px auto 0 40px
+        
+
+@media screen and ( max-width: 1500px )
+    .top
+        padding: 0 5.5em
+        padding-bottom: 30px
+        &__title
+            font-size: 2.5em
+    .header
+        padding: 1.6em 0
+        &__logo
+            font-size: 2em
+
+@media screen and ( max-width: 1024px )
+    .header
+        padding: 1.4em 0
+        &__logo
+            font-size: 1.7em
+        &--nav
+            font-size: 1em
+    .top
+        padding: 0 2em
+        padding-bottom: 20px
+        &__title
+            margin: 20px auto 0 40px
+            font-size: 1.8em
+
+@media screen and ( max-width: 768px )
+    .header
+        border: none
+        &__logo
+            padding-left: 0
+        &--nav
+            padding-right: 0
+            display: none
+        &--burger
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            z-index: 100
+            span
+                width: 30px
+                border: 1px solid #ffffff
+                margin-bottom: 7px
+                transition: .5s
+    .last-span
+        margin-bottom: 0!important
+    .top
+        &__title
+            margin: 0 auto 0 0
+            text-align: center   

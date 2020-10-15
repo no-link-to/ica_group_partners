@@ -1,0 +1,75 @@
+.hero
+    background: #1F3F55
+    color: #ffffff
+    text-align: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.partners
+    padding: 70px 12.5em
+    margin: 0 40px
+
+.partners--item
+    background: #03070A
+    margin-bottom: 70px
+    &__img
+        width: 25%
+        height: 60%
+        margin-right: auto
+    &__text
+        line-height: 30px
+        text-align: left
+        font-size: 18px
+        margin-left: auto
+        width: 70%
+
+.partner-wrapper
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    padding: 30px 30px
+
+@media screen and ( max-width: 1500px )
+    .partners
+        padding: 60px 5.5em
+    .partners--item
+        margin-bottom: 60px
+
+@media screen and ( max-width: 1024px )
+    .partners
+        padding: 40px 2em
+    .partners--item
+        margin-bottom: 40px
+        &__text
+            line-height: 25px
+            font-size: 16px
+
+@media screen and ( max-width: 768px )
+    .partner-wrapper
+        flex-direction: column
+    .partners--item
+        margin-bottom: 70px
+        &__img
+            width: 50%
+            margin-left: auto
+            margin-bottom: 10px
+        &__text
+            line-height: 30px
+            text-align: center
+            font-size: 18px
+            margin-right: auto
+            width: 100%
+    .partners
+        margin: 0
+
+@media screen and ( max-width: 440px )
+    .partners--item
+        &__img
+            margin-left: 0
+        &__text
+            font-size: 16px
+            line-height: 24px
+            text-align: left
