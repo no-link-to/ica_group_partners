@@ -24,6 +24,10 @@
             &:hover
                 font-weight: bold
 
+.title-wrapper 
+    display: flex
+    flex-direction: row
+
 .first-span 
     &.active
         transform: rotate(-45deg) translate(-8px, -3px)
@@ -34,6 +38,12 @@
     &.active
         transform: rotate(45deg) translate(-9px, 2px)
 
+.top__phone
+    margin: 30px 40px 0 auto
+    font-size: 2em
+    text-decoration: none
+    color: #ffffff
+
 .hidden-menu 
     display: flex
     flex-direction: column
@@ -41,11 +51,11 @@
     padding: 4em 2em
     margin: 0
     box-sizing: border-box
-    width: 200px
+    width: 250px
     background-color: #44657C
     height: 100%
     top: 0
-    right: -200px
+    right: -250px
     transition: right .5s
     z-index: 2 
     text-align: right
@@ -59,20 +69,33 @@
 .top
     background: #44657C
     padding: 0 12.5em
-    padding-bottom: 30px
+    padding-bottom: 0
     color: #ffffff
     &__title
         font-weight: 400
-        font-size: 2.8em
-        margin: 30px auto 0 40px
-        
+        font-size: 2.2em
+        margin: 20px 25px 0 25px
+
+.tab
+    padding-bottom: 20px
+    margin: 30px 0 0 40px
+    cursor: pointer
+    border-top-left-radius: 6px
+    border-top-right-radius: 6px
+    &:nth-child(2)
+        margin-left: 0
+
+.active-tab
+    background: #1F3F55
 
 @media screen and ( max-width: 1500px )
     .top
         padding: 0 5.5em
-        padding-bottom: 30px
         &__title
-            font-size: 2.5em
+            font-size: 1.8em
+        &__phone
+            margin: 35px 40px 0 auto
+            font-size: 1.4em
     .header
         padding: 1.6em 0
         &__logo
@@ -87,12 +110,12 @@
             font-size: 1em
     .top
         padding: 0 2em
-        padding-bottom: 20px
-        &__title
-            margin: 20px auto 0 40px
-            font-size: 1.8em
-
 @media screen and ( max-width: 768px )
+    .tab
+        padding-bottom: 15px
+        margin: 0
+        justify-content: center
+        align-items: center
     .header
         border: none
         &__logo
@@ -115,5 +138,16 @@
         margin-bottom: 0!important
     .top
         &__title
-            margin: 0 auto 0 0
+            margin: 15px 15px 0 15px
             text-align: center   
+            font-size: 1.4em
+        &__phone
+            margin: 5px 0 0 auto
+            font-size: 1.2em
+
+@media screen and ( max-width: 530px )
+    .top
+        &__phone 
+            display: none
+    .top__phone__mobile
+        font-size: 16px

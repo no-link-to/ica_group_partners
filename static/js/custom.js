@@ -22,4 +22,18 @@ $(document).ready(function() {
         partnersBackground();
     })
 
+    $('.tab').on('click', function() {
+        let name_tab = $(this).text().trim();
+        if (name_tab === 'Клиенты') {
+            $('#firstTab').addClass('active-tab');
+            $('#secondTab').removeClass('active-tab');
+            $('.second-tab').addClass('hidden');
+            $('.first-tab').removeClass('hidden');
+        } else {
+            $('#secondTab').addClass('active-tab');
+            $('#firstTab').removeClass('active-tab');
+            $('.second-tab').removeClass('hidden');
+            $('.first-tab').addClass('hidden');
+        }
+    });
 });
