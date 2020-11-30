@@ -7,17 +7,17 @@
     &__logo
         margin: 0
         padding-left: 40px
-        font-size: 2.25em
+        font-size: 1.8em
     &--burger
         display: none
     &--nav
         display: flex
         flex-direction: row
         align-items: center
-        font-size: 1.25em
+        font-size: 1.2em
         padding-right: 40px
         a
-            margin-right: 1.5625em
+            margin-right: 1em
             cursor: pointer
             &:last-child
                 margin-right: 0
@@ -37,12 +37,6 @@
 .last-span 
     &.active
         transform: rotate(45deg) translate(-9px, 2px)
-
-.top__phone
-    margin: 30px 40px 0 auto
-    font-size: 2em
-    text-decoration: none
-    color: #ffffff
 
 .hidden-menu 
     display: flex
@@ -73,8 +67,13 @@
     color: #ffffff
     &__title
         font-weight: 400
-        font-size: 2.2em
-        margin: 20px 25px 0 25px
+        font-size: 1.6em
+        margin: 15px 20px 0 20px
+    &__phone
+        margin: 30px 40px 0 auto
+        font-size: 1.4em
+        text-decoration: none
+        color: #ffffff
 
 .tab
     padding-bottom: 20px
@@ -91,25 +90,26 @@
 @media screen and ( max-width: 1500px )
     .top
         padding: 0 5.5em
-        &__title
-            font-size: 1.8em
-        &__phone
-            margin: 35px 40px 0 auto
-            font-size: 1.4em
     .header
         padding: 1.6em 0
-        &__logo
-            font-size: 2em
 
 @media screen and ( max-width: 1024px )
     .header
         padding: 1.4em 0
         &__logo
-            font-size: 1.7em
+            font-size: 1.6em
         &--nav
             font-size: 1em
     .top
         padding: 0 2em
+        &__title
+            margin: 10px 15px 0 15px
+            font-size: 1.4em
+        &__phone
+            margin-top: 35px 
+            font-size: 1.1em
+    .tab
+        padding-bottom: 10px
 @media screen and ( max-width: 768px )
     .tab
         padding-bottom: 15px
@@ -138,16 +138,18 @@
         margin-bottom: 0!important
     .top
         &__title
-            margin: 15px 15px 0 15px
             text-align: center   
-            font-size: 1.4em
         &__phone
-            margin: 5px 0 0 auto
+            margin: 0 0 0 auto
             font-size: 1.2em
 
 @media screen and ( max-width: 530px )
     .top
+        &__title
+            font-size: 1.2em
         &__phone 
             display: none
     .top__phone__mobile
         font-size: 16px
+    .tab
+        padding-bottom: 10px
